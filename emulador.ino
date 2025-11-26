@@ -1,3 +1,4 @@
+//Código do emulador ESP32
 #include <WiFi.h>
 #include <PubSubClient.h>
 
