@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic MQTT</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Ionic CDN-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+<ion-app>
+
+    <<ion-header>
+    <ion-toolbar id="temperatura" color="primary">
+        <ion-title>Temperatura IoT</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+    <ion-content class="ion-padding">
+
+        <h2>Temperatura Recebida:</h2>
+        <ion-card>
+            <ion-card-content>
+                <h1 id="temp">Aguardando...</h1>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-button id="ligar" color="success">Ligar LED</ion-button>
+        <ion-button id="desligar" color="danger">Desligar LED</ion-button>
+
+    </ion-content>
+
+    <ion-button id="btnVoltar" color="primary" expand="block">Voltar ao Login</ion-button>
+</ion-app>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script type="module" src="navigation.js"></script>
+<script type="module" src="mqtt.js"></script>
+
+
+</body>
+
+</html>

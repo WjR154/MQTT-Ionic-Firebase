@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--Ionic CDN-->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+<ion-app>
+  <form id="formLogin">
+    <ion-list>
+      <ion-item>
+        <ion-input type="email" label="E-mail" placeholder="exemplo@gmail.com"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="password" label="Senha" placeholder="*********">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button id="btnEntrar" type="button" shape="round" expand="block">Login</ion-button>
+
+    <ion-button id="btn-cadastrar" fill="clear">Cadastrar-se</ion-button>
+
+    <ion-button id="btn-esqueci" fill="clear">Esqueci minha senha</ion-button>
+
+  </form>
+</ion-app>
+
+<!-- Firebase SDK -->
+<script type="module">
+  // Importa Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+
+  // Configuração do Firebase (pegar no painel do Firebase)
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiSz7Q_p5w1nPo10wLxhO18fJwm6UfBmw",
+    authDomain: "SEU_PROJETO.firebaseapp.com",
+    projectId: "login-ionic-87918",
+    storageBucket: "com.tela.login",
+    messagingSenderId: "SEU_MESSAGING_ID",
+    appId: "1:302347433837:android:6c3fe8e50f72429edfcc64"
+  };
+
+  // Inicializa Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Exporta auth para usar em outros JS
+  window.auth = auth;
+  window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+  window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+</script>
+
+<script type="module" src="navigation.js"></script>
+
+
+</body>
+
+</html>
