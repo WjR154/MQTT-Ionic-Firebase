@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Login Com MQTT</string>
+    <string name="title_activity_main">Login Com MQTT</string>
+    <string name="package_name">com.Login.MQTT</string>
+    <string name="custom_url_scheme">com.Login.MQTT</string>
+</resources>
