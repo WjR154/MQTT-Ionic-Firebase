@@ -36,15 +36,14 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 
-    // Configuração do Firebase (pegar no painel do Firebase)
-    const firebaseConfig = {
-      apiKey: "AIzaSyDiSz7Q_p5w1nPo10wLxhO18fJwm6UfBmw",
-      authDomain: "SEU_PROJETO.firebaseapp.com",
-      projectId: "login-ionic-87918",
-      storageBucket: "com.tela.login",
-      messagingSenderId: "SEU_MESSAGING_ID",
-      appId: "1:302347433837:android:6c3fe8e50f72429edfcc64"
-    };
+ //Coloque as configurações da sua própria APIconst firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "seu-projeto.firebaseapp.com",
+  projectId: "seu-projeto",
+  storageBucket: "seu-projeto.appspot.com",
+  messagingSenderId: "1234567890",
+  appId: "1:1234567890:web:abcdef123456",
+};
 
     // Inicializa Firebase
     const app = initializeApp(firebaseConfig);
